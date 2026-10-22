@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+html { background: #09090b; }
+body {
+  @apply bg-base text-zinc-200 antialiased font-sans;
+  font-feature-settings: "cv11", "ss01";
+}
+::selection { background: #3f3f46; color: #fafafa; }
+
+/* scrollbar */
+* { scrollbar-width: thin; scrollbar-color: #3f3f46 #09090b; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #09090b; }
+::-webkit-scrollbar-thumb { background: #27272a; border: 2px solid #09090b; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-5xl px-5; }
+  .rule { @apply border-zinc-800; }
+  .label { @apply font-mono text-xs uppercase tracking-wider text-zinc-500; }
+  .tag { @apply inline-block border border-zinc-800 px-2 py-0.5 font-mono text-xs text-zinc-400; }
+  .btn { @apply inline-flex items-center gap-2 border border-zinc-700 px-4 py-2 font-mono text-sm text-zinc-100 transition-colors hover:border-zinc-400 hover:bg-zinc-900; }
+  .btn-solid { @apply border-zinc-100 bg-zinc-100 text-zinc-950 hover:bg-white hover:border-white; }
+
+  /* terminal block */
+  .term { @apply border border-zinc-800 bg-[#0c0c0f] font-mono text-[13px] leading-relaxed; }
+  .term-head { @apply flex items-center justify-between border-b border-zinc-800 px-3 py-1.5 text-xs text-zinc-500; }
+  .term pre { @apply overflow-x-auto p-3 text-zinc-300; }
+  .term .prompt { @apply select-none text-zinc-600; }
+  .term .comment { @apply text-zinc-500; }
+}
+
+.reel-player:fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  aspect-ratio: auto !important;
+  background: #000;
+}
+
+.reel-player video:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  object-fit: contain;
+  object-position: center;
+}
