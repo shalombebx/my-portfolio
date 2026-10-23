@@ -18,6 +18,23 @@ body {
 ::-webkit-scrollbar-thumb { background: #27272a; border: 2px solid #09090b; border-radius: 6px; }
 ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
 
+.profile-photo-dialog {
+  width: min(90vw, 38rem);
+  max-width: none;
+  max-height: 90vh;
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid #27272a;
+  border-radius: 12px;
+  background: #09090b;
+  color: #e4e4e7;
+}
+.profile-photo-dialog::backdrop {
+  background: rgb(0 0 0 / 80%);
+  backdrop-filter: blur(4px);
+}
+
 @layer components {
   .wrap { @apply mx-auto w-full max-w-5xl px-5; }
   .rule { @apply border-zinc-800; }

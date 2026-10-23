@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import ProjectCard from "@/components/ProjectCard";
+import ProfilePhotoPreview from "@/components/ProfilePhotoPreview";
 import { projects } from "@/lib/projects";
 
 const competencies = [
@@ -32,21 +33,7 @@ export default function Home() {
       <section className="wrap grid gap-10 pt-16 sm:pt-24 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,0.85fr)] lg:items-center">
         <div>
           <div className="flex flex-wrap items-center gap-3">
-            <a
-              href="/profile.jpg"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Open Shalom Bebebaraseigha's profile photo"
-              className="block h-12 w-12 shrink-0 overflow-hidden rounded-full border border-zinc-700 transition-opacity hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-300"
-            >
-              <Image
-                src="/profile.jpg"
-                alt="Shalom Bebebaraseigha"
-                width={96}
-                height={96}
-                className="h-full w-full object-cover"
-              />
-            </a>
+            <ProfilePhotoPreview />
             <p className="inline-flex items-center gap-2 border border-zinc-800 px-3 py-1 font-mono text-xs text-zinc-300">
               <span className="text-emerald-400">&#9679;</span>
               Available for Full-Stack &amp; AI Engineering roles
