@@ -65,6 +65,9 @@ export default function Home() {
             <Link href="/gallery" className="btn">
               Watch reels
             </Link>
+            <a href="mailto:shalombebx@gmaill.com" className="btn">
+              Get in touch
+            </a>
           </div>
         </div>
 
