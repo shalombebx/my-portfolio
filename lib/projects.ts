@@ -7,6 +7,7 @@ export interface Project {
   year: string;
   /** Optional deployed URL. Placeholders are marked in PLACEHOLDER_HOSTS below. */
   liveUrl?: string;
+  demoVideo?: string;
   repoUrl: string;
   stack: string[];
   features: string[];
@@ -119,6 +120,7 @@ export const projects: Project[] = [
       "Local-first ATS that ranks resumes against a job description using Ollama embeddings and a five-signal scoring model. No API keys, no data leaves the machine.",
     status: "complete",
     year: "2026",
+    demoVideo: "/reels/smart-resume-screener.mp4",
     repoUrl: "https://github.com/shalombebx/smart-resume-screener",
     stack: [
       "Python",

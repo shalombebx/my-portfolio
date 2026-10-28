@@ -51,6 +51,22 @@ export default async function ProjectPage({ params }: { params: Promise<Params> 
         </div>
       </header>
 
+      {p.demoVideo && (
+        <section className="mt-10">
+          <h2 className="label">Project demo</h2>
+          <video
+            className="mt-3 w-full border border-zinc-800 bg-black"
+            controls
+            playsInline
+            preload="metadata"
+            aria-label={`${p.title} demo`}
+          >
+            <source src={p.demoVideo} type="video/mp4" />
+            Your browser does not support the video element.
+          </video>
+        </section>
+      )}
+
       <section className="mt-14">
         <h2 className="label">Specs</h2>
         <dl className="mt-3 border border-zinc-800">

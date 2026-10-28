@@ -23,4 +23,13 @@ export const reels: Reel[] = [
       "Screen recording walkthrough of the deployed oil-spill-risk-classifier app.",
     ],
   },
+  {
+    id: "smart-resume-screener-demo",
+    title: "Smart Resume Screener",
+    src: "/reels/smart-resume-screener.mp4",
+    aspectRatio: "40 / 21",
+    context: "Personal project",
+    tags: ["NLP", "App walkthrough"],
+    breakdown: ["Screen recording walkthrough of the Smart Resume Screener app."],
+  },
 ];
